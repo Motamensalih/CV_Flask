@@ -10,6 +10,7 @@ app = Flask(__name__)
 ALLOWED_EXTENSIONS = {'jpg' , 'jpeg'}
 
 model = models.googlenet(pretrained = True)
+model.eval()
 
 imagenet_index = json.load(open('./imagenet_class_index.json'))
 
